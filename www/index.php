@@ -19,6 +19,20 @@
       width: 50%;
       gap: 1rem;
     }
+
+    p.error {
+      color: red;
+      margin: 0;
+    }
+
+    p.error:empty {
+      display: none;
+    }
+
+    input.error,
+    select.error {
+      border: 1px solid red;
+    }
   </style>
   <body>
     <form>
@@ -27,8 +41,12 @@
           <option value='<?php echo $breed['id_breed']; ?>'><?php echo $breed['name']; ?></option>
         <?php endforeach; ?>
       </select>
+      <p class='error' id='id_breed_error'></p>
       <textarea id='description' name='description' required></textarea>
-      <input type='submit' value='Submit'>
+      <p class='error' id='description_error'></p>
+      <input id='submit' type='submit' value='Submit'>
+      <p class='error' id='submit_error'></p>
     </form>
+    <script src="/js/descriptions.js"></script>
   </body>
 </html>
