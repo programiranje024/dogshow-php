@@ -25,12 +25,6 @@ form.addEventListener("submit", (e) => {
   // Get the value of the description input
   const descriptionValue = description.value;
 
-  // Create a new FormData object
-  const formData = new FormData();
-  // Add the breed and description values to the formData object
-  formData.append("id_breed", breedValue);
-  formData.append("description", descriptionValue);
-
   // Reset the errors
   setError(breed.id);
   setError(description.id);
@@ -51,8 +45,14 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
+  // Create a new FormData object
+  const formData = new FormData();
+  // Add the breed and description values to the formData object
+  formData.append("id_breed", breedValue);
+  formData.append("description", descriptionValue);
+
   // Send a POST request to the server (path: /insert-breed.php)
-  fetch("/insert-breed.php", {
+  fetch("/ajax/insert-breed.php", {
     method: "POST",
     body: formData,
   })
