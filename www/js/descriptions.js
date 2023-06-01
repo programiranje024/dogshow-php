@@ -51,7 +51,7 @@ form.addEventListener("submit", (e) => {
   formData.append("id_breed", breedValue);
   formData.append("description", descriptionValue);
 
-  // Send a POST request to the server (path: /insert-breed.php)
+  // Send a POST request to the server (path: /ajax/insert-breed.php)
   fetch("/ajax/insert-breed.php", {
     method: "POST",
     body: formData,

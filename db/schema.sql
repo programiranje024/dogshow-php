@@ -27,4 +27,4 @@ CREATE TABLE IF NOT EXISTS votes (
 DELETE FROM breed;
 INSERT INTO breed (name) VALUES ('Abyssinian');
 INSERT INTO breed (name) VALUES ('Aegean');
-INSERT INTO breed (name) VALUES ('American Bobtail');
+INSERT INTO breed (name) VALUES ('American Bobtail'); 
